@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        deletearow: deletearow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(HOME) &kp BACKSPACE>;
+            label = "DELETEAROW";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -23,7 +32,7 @@
 
         layer1 {
             bindings = <
-&kp LS(TAB)     &kp LC(BACKSPACE)  &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &kp N5         &kp KP_NUMLOCK     &kp N7        &kp N8        &kp N9         &trans      &kp DELETE       &kp BACKSPACE
+&kp LS(TAB)     &kp LC(BACKSPACE)  &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &deletearow    &kp KP_NUMLOCK     &kp N7        &kp N8        &kp N9         &trans      &kp DELETE       &kp BACKSPACE
 &kp ESCAPE      &kp HOME           &kp LEFT     &kp DOWN      &kp RIGHT      &kp END        &kp CAPS           &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp N0      &kp RET
 &kp LEFT_SHIFT  &kp LC(Z)          &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp LS(LG(S))  &kp LG(SEMICOLON)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp KP_DOT  &kp RIGHT_SHIFT
                 &trans             &trans                     &trans                        &kp SPACE                                      &kp RIGHT_ALT  &kp RCTRL
@@ -32,10 +41,10 @@
 
         layer2 {
             bindings = <
-&kp CAPSLOCK  &kp PRINTSCREEN  &kp PAGE_UP     &kp HOME  &kp F2     &trans  &trans  &trans  &kp INSERT  &trans    &trans     &trans  &trans
-&trans        &kp DELETE       &kp PAGE_DOWN   &kp END   &kp F2     &trans  &trans  &trans  &trans      &trans    &trans     &trans
-&trans        &kp PAUSE_BREAK  &kp SCROLLLOCK  &kp F4    &kp LG(V)  &trans  &trans  &trans  &trans      &kp RGUI  &trans     &trans
-              &trans           &trans                    &trans             &trans                      &kp RALT  &kp RCTRL
+&trans  &trans     &kp PAGE_UP  &kp UP     &kp PG_DN  &deletearow  &kp PLUS       &kp MINUS         &kp STAR          &kp FSLH              &kp EQUAL              &kp DEL    &kp BSPC
+&trans  &kp HOME   &kp LEFT     &kp DOWN   &kp RIGHT  &kp END      &trans         &kp LS(NUMBER_9)  &kp LS(NUMBER_0)  &kp LBKT              &kp RBKT               &kp RET
+&trans  &kp LC(Z)  &kp LC(X)    &kp LC(C)  &kp LC(V)  &trans       &kp LS(GRAVE)  &kp LS(SQT)       &kp SQT           &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp RSHFT
+        &trans     &trans                  &trans                  &kp SPACE                                          &kp RALT              &kp RCTRL
             >;
         };
 
