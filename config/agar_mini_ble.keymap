@@ -7,7 +7,6 @@
 #include "./boards/shields/klink_kbd/common.keymap"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     keymap {
@@ -15,19 +14,19 @@
 
         default_layer {
             bindings = <
-&lt 2 TAB     &kp Q      &kp W     &kp E  &kp R        &kp T  &kp Y      &kp U  &kp I      &kp O          &kp P         &kp DELETE       &kp BSPC
-&lt 3 ESCAPE  &kp A      &kp S     &kp D  &kp F        &kp G  &kp H      &kp J  &kp K      &kp L          &kp SEMI      &kp RET
-&kp LSHFT     &kp Z      &kp X     &kp C  &kp V        &kp B  &kp N      &kp M  &kp COMMA  &kp DOT        &kp QUESTION  &kp RIGHT_SHIFT
+&lt 2 TAB     &kp Q      &kp W     &kp E  &kp R        &kp T  &kp Y      &kp U  &kp I      &kp O          &kp P      &kp DELETE       &kp BSPC
+&lt 3 ESCAPE  &kp A      &kp S     &kp D  &kp F        &kp G  &kp H      &kp J  &kp K      &kp L          &kp SEMI   &kp RET
+&kp LSHFT     &kp Z      &kp X     &kp C  &kp V        &kp B  &kp N      &kp M  &kp COMMA  &kp DOT        &kp SLASH  &kp RIGHT_SHIFT
               &kp LCTRL  &kp LALT         &lt 1 SPACE         &kp SPACE                    &kp RIGHT_ALT  &kp RCTRL
             >;
         };
 
         layer1 {
             bindings = <
-&kp GRAVE  &kp LC(BACKSPACE)  &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &kp N5           &kp N6            &kp N7             &kp N8  &kp N9         &kp N0            &kp MINUS  &kp EQUAL
-&trans     &kp HOME           &kp LEFT     &kp DOWN      &kp RIGHT      &kp END          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans         &kp SINGLE_QUOTE  &trans
-&trans     &kp LC(Z)          &kp LC(X)    &kp LC(C)     &kp LC(V)      &mmv MOVE_RIGHT  &trans            &trans             &trans  &kp SLASH      &trans            &trans
-           &trans             &trans                     &trans                          &kp SPACE                                    &kp RIGHT_ALT  &kp RCTRL
+&kp LS(TAB)     &kp LC(BACKSPACE)  &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &kp N5         &kp KP_NUMLOCK     &kp N7        &kp N8        &kp N9         &trans      &kp DELETE       &kp BACKSPACE
+&kp ESCAPE      &kp HOME           &kp LEFT     &kp DOWN      &kp RIGHT      &kp END        &kp CAPS           &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp N0      &kp RET
+&kp LEFT_SHIFT  &kp LC(Z)          &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp LS(LG(S))  &kp LG(SEMICOLON)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp KP_DOT  &kp RIGHT_SHIFT
+                &trans             &trans                     &trans                        &kp SPACE                                      &kp RIGHT_ALT  &kp RCTRL
             >;
         };
 
