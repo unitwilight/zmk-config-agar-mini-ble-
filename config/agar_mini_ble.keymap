@@ -27,18 +27,20 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <178>;
+            tapping-term-ms = <180>;
             hold-trigger-key-positions = <19 6 31 7 6 7 8 9 10 19 20 21 22 23 31 32 33 34 35 11 12 24 36 42 41 40>;
+            quick-tap-ms = <110>;
         };
 
-        hmrright: hmrright {
+        hrmright: hrmright {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMRRIGHT";
+            label = "HRMRIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 25 26 27 28 29 30 37 38 39>;
+            quick-tap-ms = <110>;
         };
 
         td1: td1 {
@@ -89,7 +91,7 @@
         default_layer {
             bindings = <
 &lt 2 TAB     &kp Q             &kp W                &kp E                &kp R                  &kp T  &kp Y      &kp U                    &kp I                  &kp O                  &kp P                         &kp DELETE       &kp BSPC
-&lt 3 ESCAPE  &hrmleft LCTRL A  &hrmleft LEFT_GUI S  &hrmleft LEFT_ALT D  &hrmleft LEFT_SHIFT F  &kp G  &kp H      &hmrright RIGHT_SHIFT J  &hmrright RIGHT_ALT K  &hmrright RIGHT_GUI L  &hmrright RIGHT_CONTROL SEMI  &kp RET
+&lt 3 ESCAPE  &hrmleft LCTRL A  &hrmleft LEFT_GUI S  &hrmleft LEFT_ALT D  &hrmleft LEFT_SHIFT F  &kp G  &kp H      &hrmright RIGHT_SHIFT J  &hrmright RIGHT_ALT K  &hrmright RIGHT_GUI L  &hrmright RIGHT_CONTROL SEMI  &kp RET
 &kp LSHFT     &kp Z             &kp X                &kp C                &kp V                  &kp B  &kp N      &kp M                    &kp COMMA              &kp DOT                &kp SLASH                     &kp RIGHT_SHIFT
               &kp LCTRL         &kp LALT                                  &lt 1 SPACE                   &kp SPACE                                                  &kp RIGHT_ALT          &kp RCTRL
             >;
@@ -125,7 +127,7 @@
         layer4 {
             bindings = <
 &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &reset        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans        &trans                      &trans          &trans                  &trans  &trans
             >;
