@@ -108,7 +108,7 @@
             bindings = <
 &trans  &trans            &kp PAGE_UP       &kp UP            &kp PG_DN         &deletearow  &kp PLUS          &kp MINUS   &kp STAR    &kp FSLH    &kp EQUAL   &kp DEL    &kp BSPC
 &trans  &kp HOME          &kp LEFT          &kp DOWN          &kp RIGHT         &kp END      &td1              &td2        &td3        &td4        &td5        &kp RET
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)   &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp RSHFT
+&mo 4   &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)   &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp RSHFT
         &trans            &trans                              &trans                         &kp SPACE                                 &kp RALT    &kp RCTRL
             >;
         };
