@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#define FW_VER zmk_firmware_version_251115
+#define FW_VER zmk_firmware_version_261007
  
 #if 1
 #define ZMK_BEHAVIORS_OMIT_CAPS_WORD        // &caps_word
@@ -78,11 +78,9 @@
             display-name = "Layer-Tap(HP)";
         };
         
-        // trans和none重命名一下，trans排在前面
         trans: transparent { display-name = "_Trans"; };
         none: none { display-name = "Key(None)"; };
         
-
         #if 1
         out: outputs { display-name = "zmk_reserved_output_sel"; };
         ZMK_MACRO(Device_USB, bindings = <&out OUT_USB>;)
@@ -129,7 +127,6 @@
             #binding-cells = <0>;
             hold-time-ms = <1000>;
         };
-
         sys_reset: sysreset { display-name = "zmk_reserved_reset"; };
         bootloader: bootload { display-name = "zmk_reserved_bootloader"; };
         
